@@ -1,0 +1,33 @@
+---
+output:
+  pdf_document:
+    latex_engine: xelatex
+---
+
+```{r,echo=FALSE}
+load("map_4001_5000.Rdata")
+library(graphics)
+```
+
+```{r results='asis', comment=NA,echo=FALSE, fig.width=7, fig.height=6 }
+for (i in 4001:5000) {
+ cat("#[",sp_nam[[i]],"](",http[i],")","\n")
+ cat("## Distribution map","\n")
+     
+frame()
+rasterImage(map[[i]], 0, 0, 1, 1)
+cat("\n")
+cat("\n")
+
+cat("## Species Scientific names jetz","\n")
+cat(full_list[i,1])
+cat("\n")
+cat("\n")
+
+cat("\\newpage")
+
+cat("\n")
+cat("\n")
+}
+```
+
