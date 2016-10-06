@@ -1,3 +1,3 @@
 # Parsing_codes
 
-Function to parse data on website for the bird migration project
+Some code I develloped to parse data on website for the bird migration project.
